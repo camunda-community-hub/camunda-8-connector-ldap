@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.camunda.connector.ldap</groupId>
-  <artifactId>camunda-8-connector-ldap</artifactId>
-  <version>1.0.0</version>
+  <groupId>org.camunda.connector</groupId>
+  <artifactId>connector-ldap</artifactId>
+  <!-- 1.0.1 use the correct groupId / artefactId for the connector -->
+  <version>1.0.1</version>
 
   <packaging>jar</packaging>
 
