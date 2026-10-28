@@ -309,4 +309,34 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <profiles>
+    <!-- Used by .github/workflows/deploy-artifactory-camunda.yml ("mvn -P deploy-jfrog deploy") to publish to the
+         Camunda Artifactory repo (camunda-bpm-community-extensions), and only there. The parent pom turns
+         maven-deploy-plugin off, so a plain "mvn deploy" stays a no-op. This profile turns it back on.
+         It needs a <server id="camunda-nexus"> entry in settings.xml with valid credentials. -->
+    <profile>
+      <id>deploy-jfrog</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+              <skip>false</skip>
+            </configuration>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>deploy</phase>
+                <configuration>
+                  <skip>false</skip>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
