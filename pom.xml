@@ -4,7 +4,7 @@
   <groupId>org.camunda.connector</groupId>
   <artifactId>connector-ldap</artifactId>
   <!-- 1.1.0 use the correct groupId / artefactId for the connector -->
-  <version>1.1.0</version>
+  <version>1.1.1-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
